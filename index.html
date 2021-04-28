@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Chat Project</title>
+</head>
+<body>
+
+    <!-- Container and Title-->
+    <div class="container my-4">
+        <h1 class="my-4 text-center">Chat</h1>
+        
+        <!-- Buttons for Chatrooms-->
+        <div class="chat-rooms mb-3 text-center">
+            <div class="my-2">Choose a chatroom</div>
+            <button class="btn" id="general">#general</button>
+            <button class="btn" id="gaming">#gaming</button>
+            <button class="btn" id="music">#music</button>
+            <button class="btn" id="ninjas">#ninjas</button>
+        </div>
+
+        <!-- Chatlist / window-->
+        <div class="chat-window">
+            <ul class="chat-list list-group">
+                
+            </ul>
+        </div>
+
+        <!-- New chat form-->
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Your message:</div>
+                </div>
+                <input type="text" class="form-control" id="message" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="send">
+                </div>
+            </div>
+        </form>
+
+        <!-- Update name form-->
+        <form class="new-name my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Update name:</div>
+                </div>
+                <input type="text" class="form-control" id="name" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="update">
+                </div>
+            </div>
+            <div class="update-mssg"></div>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCEVEQULhyLpvevvthEd5I_BPwmBd8D9Q8",
+            authDomain: "morden-javascript-3047e.firebaseapp.com",
+            projectId: "morden-javascript-3047e",
+            storageBucket: "morden-javascript-3047e.appspot.com",
+            messagingSenderId: "219281064701",
+            appId: "1:219281064701:web:e3dd4c5d0f6e377a993494",
+            measurementId: "G-26M4HGXPF3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        db = firebase.firestore();
+        console.log('done')
+    </script>
+
+
+
+    
+
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
